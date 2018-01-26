@@ -2758,11 +2758,6 @@ a.forum-item-title:hover {
   .smallScreen {
     display:block;
   }
-  .btn-sm{
-    padding: 5px;
-  font-size: 10px;
-  line-height: 2;
-  }
 }
 
 @media (min-width: 860px) {
