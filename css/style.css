@@ -2758,6 +2758,45 @@ a.forum-item-title:hover {
   .smallScreen {
     display:block;
   }
+  h2 {
+     font-size: 130%;
+  }
+  #status{ <!-- ตัวแจ้งเตือน สถานะคดี คดีนี้อยู่ในสถานะประนอมหนี้ -->
+    font-size: 80%;
+    float: left;
+  }
+  #statuscaselist{
+    font-size: 100%;
+    margin-left: 430px;
+  }
+  #test2{  <!-- หัวข้อ -->
+        font-size: 10px;
+        <!-- float: left; -->
+  }
+  #page-wrapper{
+        font-size: 12px;
+
+  }
+  #firstname{ margin-bottom: 10px;
+  }
+  #selectmag{
+      margin-top:10px;
+  }
+    #blockmass{
+      width:270px;
+    }
+    #textblock1	{
+      font-size: 11px;
+    }
+    #textblock2	{
+      font-size: 11px;
+    }
+    #textblock3	{
+      font-size: 11px;
+    }
+    #textblock4	{
+      font-size: 11px;
+    }
 }
 
 @media (min-width: 860px) {
@@ -2767,8 +2806,7 @@ a.forum-item-title:hover {
   .smallScreen {
     display:none;
   }
-  
-} 
+}
 
 .sidebard-panel {
   width: 220px;
