@@ -205,7 +205,7 @@
                         <div class="wrapper wrapper-content animated fadeInUp" id="search-wrapper">
                             <div class="ibox float-e-margins">
                                 <div class="ibox-title">
-                                    <h3>เพิ่มรายการเบิกค่าธรรมเนียมศาล</h3>
+                                    <h3>แก้ไขรายการส่งฟ้องใหม่</h3>
                                 </div>
 
                                 <div class="ibox-content">
@@ -214,11 +214,11 @@
                                             <div class="row">
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label class="col-sm-3 control-label">วันที่จ่าย</label>
+                                                        <label class="col-sm-3 control-label">วันที่ส่งฟ้องใหม่</label>
 
                                                         <div class="col-sm-9">
                                                             <div class="input-group date">
-                                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" name="payment_date" class="form-control" placeholder="DD/MM/YYYY">
+                                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" name="issue_date" class="form-control" placeholder="DD/MM/YYYY" value="22/01/2559">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -228,73 +228,9 @@
                                             <div class="row">
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label class="col-sm-3 control-label">ค่าฤชาธรรมเนียม</label>
-
-                                                        <div class="col-sm-9"><input type="number" name="fee" class="form-control"></div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-sm-6">
-                                                    <div class="form-group">
-                                                        <label class="col-sm-3 control-label">เงินประกัน</label>
-
-                                                        <div class="col-sm-9"><input type="number" name="bond" class="form-control"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-sm-6">
-                                                    <div class="form-group">
-                                                        <label class="col-sm-3 control-label">เงินประกันเพิ่ม</label>
-
-                                                        <div class="col-sm-9"><input type="number" name="additional_bond" class="form-control"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-sm-6">
-                                                    <div class="form-group">
-                                                        <label class="col-sm-3 control-label">ค่าใช้จ่าย</label>
-
-                                                        <div class="col-sm-9"><input type="number" name="cost" class="form-control"></div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-sm-6">
-                                                    <div class="form-group">
-                                                        <label class="col-sm-3 control-label">ค่าจ้าง</label>
-
-                                                        <div class="col-sm-9"><input type="number" name="stipend" class="form-control"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-sm-6">
-                                                    <div class="form-group">
-                                                        <label class="col-sm-3 control-label">ค่าประกาศ นสพ.</label>
-
-                                                        <div class="col-sm-9"><input type="number" name="announcement_cost" class="form-control"></div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-sm-6">
-                                                    <div class="form-group">
-                                                        <label class="col-sm-3 control-label">ค่าพาหนะ</label>
-
-                                                        <div class="col-sm-9"><input type="number" name="transportation_cost" class="form-control"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-sm-6">
-                                                    <div class="form-group">
                                                         <label class="col-sm-3 control-label">หมายเหตุ</label>
 
-                                                        <div class="col-sm-9"><input type="text" name="remark" class="form-control"></div>
+                                                        <div class="col-sm-9"><input type="text" name="remark" class="form-control" value="ทดสอบ"></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -305,7 +241,7 @@
                                         <div class="form-group">
                                             <div class="col-sm-4">
                                                 <button class="btn btn-primary" type="submit">บันทึก</button>
-                                                <a href="case-preprosecution-fee-list.html" class="btn btn-white">ย้อนกลับ</a>
+                                                <a href="case-preprosecution-repeat-list.html" class="btn btn-white">ย้อนกลับ</a>
                                             </div>
                                         </div>
                                     </form>

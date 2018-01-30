@@ -74,8 +74,8 @@
                         <li class="active">
                             <a href="#"><i class="fa fa-gavel"></i> <span class="nav-label">สถานะคดีงานกฎหมาย</span> <span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                                <li class="active"><a href="case-preprosecution-notice-list.html">ชั้นเตรียมฟ้อง</a></li>
-                                <li><a href="case-prosecution-prosecution-list.html">ชั้นฟ้อง/พิพากษา</a></li>
+                                <li><a href="case-preprosecution-notice-list.html">ชั้นเตรียมฟ้อง</a></li>
+                                <li class="active"><a href="case-prosecution-prosecution-list.html">ชั้นฟ้อง/พิพากษา</a></li>
                                 <li><a href="case-appeal-appeal-list.html">ชั้นอุทธรณ์</a></li>
                                 <li><a href="case-petition-petition-list.html">ชั้นฎีกา</a></li>
                                 <li><a href="case-preenforcement-enforcement-list.html">ชั้นเตรียมบังคับคดี</a></li>
@@ -178,7 +178,7 @@
 
                 <div class="row wrapper border-bottom white-bg page-heading">
                     <div class="col-xs-12">
-                        <h2>สถานะคดีงานกฎหมาย - ชั้นเตรียมฟ้อง &nbsp; <small id ="test2">(เลขที่คดี: 256000001001)</small></h2>
+                        <h2>สถานะคดีงานกฎหมาย - ชั้นฟ้อง/พิพากษา &nbsp; <small id ="test2">(เลขที่คดี: 256000001001)</small></h2>
 
                         <ol class="breadcrumb">
                             <li>
@@ -194,7 +194,7 @@
                             </li>
 
                             <li class="active">
-                                <strong>สถานะคดีงานกฎหมาย - ชั้นเตรียมฟ้อง (เลขที่คดี: 256000001001)</strong>
+                                <strong>สถานะคดีงานกฎหมาย - ชั้นฟ้อง/พิพากษา (เลขที่คดี: 256000001001)</strong>
                             </li>
                         </ol>
                     </div>
@@ -205,7 +205,7 @@
                         <div class="wrapper wrapper-content animated fadeInUp" id="search-wrapper">
                             <div class="ibox float-e-margins">
                                 <div class="ibox-title">
-                                    <h3>เพิ่มรายการเบิกค่าธรรมเนียมศาล</h3>
+                                    <h3>รายการอนุมัติยอมความ</h3>
                                 </div>
 
                                 <div class="ibox-content">
@@ -214,12 +214,11 @@
                                             <div class="row">
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label class="col-sm-3 control-label">วันที่จ่าย</label>
+                                                        <label class="col-sm-3 control-label">ชื่อจำเลย</label>
 
                                                         <div class="col-sm-9">
-                                                            <div class="input-group date">
-                                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" name="payment_date" class="form-control" placeholder="DD/MM/YYYY">
-                                                            </div>
+                                                            <div class="checkbox"><label> <input type="checkbox" name="defendant" value="0"> นายเอ สมมติ</label></div>
+                                                            <div class="checkbox"><label> <input type="checkbox" name="defendant" value="1"> นายบี สมมติ</label></div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -228,27 +227,21 @@
                                             <div class="row">
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label class="col-sm-3 control-label">ค่าฤชาธรรมเนียม</label>
+                                                        <label class="col-sm-3 control-label">วันที่</label>
 
-                                                        <div class="col-sm-9"><input type="number" name="fee" class="form-control"></div>
+                                                        <div class="col-sm-9">
+                                                              <input type="text" name="issue_date" class="form-control" placeholder="DD/MM/YYYY" value="22/01/2559">
+                                                        </div>
                                                     </div>
                                                 </div>
 
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label class="col-sm-3 control-label">เงินประกัน</label>
+                                                        <label class="col-sm-3 control-label">จำนวนเงินที่ตกลงชำระ</label>
 
-                                                        <div class="col-sm-9"><input type="number" name="bond" class="form-control"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-sm-6">
-                                                    <div class="form-group">
-                                                        <label class="col-sm-3 control-label">เงินประกันเพิ่ม</label>
-
-                                                        <div class="col-sm-9"><input type="number" name="additional_bond" class="form-control"></div>
+                                                        <div class="col-sm-9">
+                                                            <input class="form-control" name="total_price" value="20000" readonly>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -256,17 +249,19 @@
                                             <div class="row">
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label class="col-sm-3 control-label">ค่าใช้จ่าย</label>
+                                                        <label class="col-sm-3 control-label">ชำระครั้งแรก</label>
 
-                                                        <div class="col-sm-9"><input type="number" name="cost" class="form-control"></div>
+                                                        <div class="col-sm-9"><input type="number" name="first_payment_price" class="form-control" value="2000" readonly></div>
                                                     </div>
                                                 </div>
 
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label class="col-sm-3 control-label">ค่าจ้าง</label>
+                                                        <label class="col-sm-3 control-label">ภายในวันที่</label>
 
-                                                        <div class="col-sm-9"><input type="number" name="stipend" class="form-control"></div>
+                                                        <div class="col-sm-9">
+                                                              <input type="text" name="first_payment_deadline" class="form-control" placeholder="DD/MM/YYYY" value="22/01/2559" readonly>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -274,17 +269,27 @@
                                             <div class="row">
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label class="col-sm-3 control-label">ค่าประกาศ นสพ.</label>
+                                                        <label class="col-sm-3 control-label">เงินงวดปกติ</label>
 
-                                                        <div class="col-sm-9"><input type="number" name="announcement_cost" class="form-control"></div>
+                                                        <div class="col-sm-9"><input type="number" name="annuity" class="form-control" value="2000" readonly></div>
                                                     </div>
                                                 </div>
 
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label class="col-sm-3 control-label">ค่าพาหนะ</label>
+                                                        <label class="col-sm-3 control-label">ระยะเวลา</label>
 
-                                                        <div class="col-sm-9"><input type="number" name="transportation_cost" class="form-control"></div>
+                                                        <div class="col-sm-9"><input type="text" name="period" class="form-control" value="3" readonly></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label">อัตราดอกเบี้ย</label>
+
+                                                        <div class="col-sm-9"><input type="number" name="interest_rate" class="form-control" value="200" readonly></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -294,7 +299,7 @@
                                                     <div class="form-group">
                                                         <label class="col-sm-3 control-label">หมายเหตุ</label>
 
-                                                        <div class="col-sm-9"><input type="text" name="remark" class="form-control"></div>
+                                                        <div class="col-sm-9"><input type="text" name="remark" class="form-control" value="ทดสอบ" readonly></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -304,8 +309,7 @@
 
                                         <div class="form-group">
                                             <div class="col-sm-4">
-                                                <button class="btn btn-primary" type="submit">บันทึก</button>
-                                                <a href="case-preprosecution-fee-list.html" class="btn btn-white">ย้อนกลับ</a>
+                                                <a href="case-prosecution-compromise-list.html" class="btn btn-white">ย้อนกลับ</a>
                                             </div>
                                         </div>
                                     </form>
