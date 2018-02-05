@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Legal Tracking System</title>
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+        <!-- Toastr style -->
+        <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
+
+        <!-- Gritter -->
+        <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+
+        <link href="css/animate.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+
+        <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+
+        <style>
+        #sub-nav{
+            margin-bottom: 20px;
+        }
+        </style>
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <nav class="navbar-default navbar-static-side" role="navigation">
+                <div class="sidebar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="nav-header">
+                            <div class="dropdown profile-element">
+                                <span><img alt="image" class="img-circle" src="img/profile_small.jpg" /></span>
+
+                                <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                    <span class="clear">
+                                        <span class="block m-t-xs">
+                                            <strong class="font-bold">เสาวภาคย์​ เยี่ยมธนารักษ์</strong>
+                                        </span>
+
+                                        <span class="text-muted text-xs block">ทนายความ <b class="caret"></b></span>
+                                    </span>
+                                </a>
+
+                                <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                    <li><a href="#">ข้อมูลส่วนตัว</a></li>
+                                    <li><a href="#">การแจ้งเตือน</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="login.html">ออกจากระบบ</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="logo-element">
+                                LTS
+                            </div>
+                        </li>
+
+                        <li>
+                            <a href="case-list.html"><i class="fa fa-chevron-left"></i> <span class="nav-label">ย้อนกลับ</span></a>
+                        </li>
+
+                        <li>
+                            <a href="case-summary.html"><i class="fa fa-archive"></i> <span class="nav-label">สรุปรายละเอียดคดี</span></a>
+                        </li>
+
+                        <li>
+                            <a href="case-detail-info.html"><i class="fa fa-file-text-o"></i> <span class="nav-label">ข้อมูลคดีทั่วไป</span></a>
+                        </li>
+
+                        <li class="active">
+                            <a href="#"><i class="fa fa-gavel"></i> <span class="nav-label">สถานะคดีงานกฎหมาย</span> <span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li><a href="case-preprosecution-notice-list.html">ชั้นเตรียมฟ้อง</a></li>
+                                <li><a href="case-prosecution-prosecution-list.html">ชั้นฟ้อง/พิพากษา</a></li>
+                                <li><a href="case-appeal-appeal-list.html">ชั้นอุทธรณ์</a></li>
+                                <li><a href="case-petition-petition-list.html">ชั้นฎีกา</a></li>
+                                <li class="active"><a href="case-preenforcement-enforcement-list.html">ชั้นเตรียมบังคับคดี</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#"><i class="fa fa-shield"></i> <span class="nav-label">สถานะคดีงานบังคับคดี</span> <span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li><a href="case-enforcement-enforcement-list.html">ชั้นบังคับคดี</a></li>
+                                <li><a href="case-investigate-target-list.html">ชั้นสืบทรัพย์</a></li>
+                                <li><a href="case-forfeiting-extend-list.html">ชั้นยึดทรัพย์</a></li>
+                                <li><a href="case-auction-extend-list.html">ชั้นขายทอดตลาด</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="case-expense-list.html"><i class="fa fa-money"></i> <span class="nav-label">ค่าใช้จ่าย</span></a>
+                        </li>
+
+                        <li>
+                            <a href="case-schedule-list.html"><i class="fa fa-calendar"></i> <span class="nav-label">รายการนัดหมาย</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+
+            <div id="page-wrapper" class="gray-bg">
+                <div class="row border-bottom">
+                    <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                        <div class="navbar-header">
+                            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                        </div>
+
+                        <ul class="nav navbar-top-links navbar-right">
+                            <li>
+                                <span class="m-r-sm text-muted welcome-message">ยินดีต้อนรับเข้าสู่ระบบ <strong>Legal Tracking System</strong></span>
+                            </li>
+
+                            <li class="dropdown">
+                                <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                    <i class="fa fa-bell"></i>  <span class="label label-primary">3</span>
+                                </a>
+              
+                                <ul class="dropdown-menu animated fadeInDown m-t-xs" id="block">
+                                    <li>
+                                        <a href="#">
+                                            <div id="textblock1">
+                                                <i class="fa fa-envelope fa-fw"></i> คุณมี 3 ข้อความยังไม่ได้อ่าน
+                                                <span class="pull-right text-muted small">4 minutes ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                    <li class="divider"></li>
+
+                                    <li>
+                                        <a href="#">
+                                            <div id="textblock2">
+                                                <i class="fa fa-briefcase fa-fw"></i> คุณมี 12 งานรอดำเนินการ
+                                                <span class="pull-right text-muted small">12 minutes ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="grid_options.html">
+                                            <div id="textblock3">
+                                                <i class="fa fa-calendar fa-fw"></i> คุณมี 2 งานนัดหมายวันนี้
+                                                <span class="pull-right text-muted small">14 minutes ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                    <li class="divider"></li>
+
+                                    <li>
+                                        <div class="text-center link-block" id="textblock4">
+                                            <a href="notifications.html">
+                                                <strong>ดูการแจ้งเตือนทั้งหมด</strong>
+                                                <i class="fa fa-angle-right"></i>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="login.html">
+                                    <i class="fa fa-sign-out"></i> ออกจากระบบ
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+
+                <div class="row wrapper border-bottom white-bg page-heading">
+                    <div class="col-xs-12">
+                        <h2>สถานะคดีงานกฎหมาย - ชั้นเตรียมบังคับคดี &nbsp; <small id ="test2">(เลขที่คดี: 256000001001)</small></h2>
+
+                        <ol class="breadcrumb">
+                            <li>
+                                <a href="index.html">หน้าหลัก</a>
+                            </li>
+
+                            <li>
+                                <a href="case-search.html">ค้นหาข้อมูลคดี</a>
+                            </li>
+
+                            <li>
+                                <a href="case-list.html">รายการคดี (เลขที่กลุ่มลูกหนี้: 256000001)</a>
+                            </li>
+
+                            <li class="active">
+                                <strong>สถานะคดีงานกฎหมาย - ชั้นเตรียมบังคับคดี (เลขที่คดี: 256000001001)</strong>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="wrapper wrapper-content animated fadeInUp" id="search-wrapper">
+                            <div class="ibox float-e-margins">
+                                <div class="ibox-title">
+                                    <h3>เพิ่มรายการออกคำบังคับ</h3>
+                                </div>
+                                <div class="ibox-content">
+                                    <form method="get" class="form-horizontal">
+                                        <div class="form-section">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label">ชื่อจำเลย</label>
+
+                                                        <div class="col-sm-9">
+                                                            <div class="checkbox"><label> <input type="checkbox" name="defendant" value="0" > นายเอ สมมติ</label></div>
+                                                            <div class="checkbox"><label> <input type="checkbox" name="defendant" value="1"> นายบี สมมติ</label></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label">วันท่ีส่งคำบังคับ</label>
+
+                                                        <div class="col-sm-9">
+                                                          <div class="input-group date">
+                                                              <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" name="send_date" class="form-control" placeholder="DD/MM/YYYY" >
+                                                          </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label">ผลการส่ง</label>
+
+                                                        <div class="col-sm-9"><input type="text" name="result" class="form-control"></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label">วันที่รับคำบังคับ</label>
+
+                                                        <div class="col-sm-9">
+                                                          <div class="input-group date">
+                                                              <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" name="receive_date" class="form-control" placeholder="DD/MM/YYYY">
+                                                          </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label">วันที่ประกาศ นสพ.</label>
+
+                                                        <div class="col-sm-9">
+                                                          <div class="input-group date">
+                                                              <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" name="announcement_date" class="form-control" placeholder="DD/MM/YYYY" >
+                                                          </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label">ค่าใช้จ่ายในการประกาศ</label>
+
+                                                        <div class="col-sm-9"><input type="number" name="announcement_cost" class="form-control"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label">หมายเหตุ</label>
+
+                                                        <div class="col-sm-9"><input type="text" name="remark" class="form-control"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="hr-line-dashed"></div>
+
+                                        <div class="form-group">
+                                            <div class="col-sm-4">
+                                                <button class="btn btn-primary" type="submit">บันทึก</button>
+                                                <a href="case-preenforcement-enforcement-list.html" class="btn btn-white">ย้อนกลับ</a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mainly scripts -->
+        <script src="js/jquery-2.1.1.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+        <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+        <!-- Custom and plugin javascript -->
+        <script src="js/inspinia.js"></script>
+
+        <!-- jQuery UI -->
+        <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+        <!-- Date picker -->
+        <script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+
+
+        <script src="js/form.js"></script>
+    </body>
+</html>
