@@ -2782,21 +2782,21 @@ a.forum-item-title:hover {
   #selectmag{
       margin-top:10px;
   }
-    #blockmass{
-      width:270px;
-    }
-    #textblock1	{
-      font-size: 11px;
-    }
-    #textblock2	{
-      font-size: 11px;
-    }
-    #textblock3	{
-      font-size: 11px;
-    }
-    #textblock4	{
-      font-size: 11px;
-    }
+  #blockmass{
+    width:270px;
+  }
+  #textblock1	{
+    font-size: 11px;
+  }
+  #textblock2	{
+    font-size: 11px;
+  }
+  #textblock3	{
+    font-size: 11px;
+  }
+  #textblock4	{
+    font-size: 11px;
+  }
 }
 
 @media (min-width: 860px) {
@@ -2805,6 +2805,21 @@ a.forum-item-title:hover {
   }
   .smallScreen {
     display:none;
+  }
+  #blockmass{
+    width:255px;
+  }
+  #textblock1	{
+    font-size: 11px;
+  }
+  #textblock2	{
+    font-size: 11px;
+  }
+  #textblock3	{
+    font-size: 11px;
+  }
+  #textblock4	{
+    font-size: 11px;
   }
 }
 
